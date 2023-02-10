@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/app.png</file>
+        <file>images/camera.png</file>
+        <file>images/error.png</file>
+        <file>images/fan.png</file>
+        <file>images/fuel.png</file>
+        <file>images/klima.png</file>
+        <file>images/multimedia.png</file>
+        <file>images/navigation.png</file>
+        <file>images/tachometer.png</file>
+        <file>images/telefon.png</file>
+        <file>images/pause.png</file>
+        <file>images/play.png</file>
+        <file>images/disk.png</file>
+        <file>images/forward.png</file>
+        <file>images/abs.png</file>
+        <file>images/airbag.png</file>
+        <file>images/battery.png</file>
+        <file>images/engine.png</file>
+        <file>images/oil.png</file>
+        <file>images/tire.png</file>
+        <file>images/wash.png</file>
+        <file>images/water.png</file>
+        <file>musics/track1.mp3</file>
+        <file>musics/track2.mp3</file>
+        <file>musics/track3.mp3</file>
+        <file>musics/track4.mp3</file>
+        <file>musics/track5.mp3</file>
+        <file>musics/track6.mp3</file>
+        <file>musics/track8.mp3</file>
+        <file>musics/track9.mp3</file>
+        <file>images/addPhone.png</file>
+        <file>images/volume.png</file>
+        <file>images/seat.png</file>
+        <file>images/triangle.png</file>
+    </qresource>
+</RCC>
