@@ -11,6 +11,5 @@
         <file>ErrorPage.qml</file>
         <file>CameraPage.qml</file>
         <file>AppPage.qml</file>
-        <file>AllSetting.qml</file>
     </qresource>
 </RCC>

@@ -34,5 +34,7 @@
         <file>images/volume.png</file>
         <file>images/seat.png</file>
         <file>images/triangle.png</file>
+        <file>images/cameraOn.png</file>
+        <file>images/videoOff.png</file>
     </qresource>
 </RCC>

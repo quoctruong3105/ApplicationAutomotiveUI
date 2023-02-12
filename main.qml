@@ -802,5 +802,6 @@ Window {
         id: allSettingsId
         property alias fuelNeedleRotationId: fuelNeedleId.rotation
         //property alias distance: value
+        property alias currentPage: rootId.index
     }
 }
