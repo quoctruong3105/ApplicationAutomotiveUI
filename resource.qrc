@@ -34,5 +34,15 @@
         <file>images/volume.png</file>
         <file>images/seat.png</file>
         <file>images/triangle.png</file>
+        <file>images/cameraOn.png</file>
+        <file>images/videoOff.png</file>
+        <file>apps/amazon-pay.png</file>
+        <file>apps/facebook.png</file>
+        <file>apps/gmail.png</file>
+        <file>apps/google.png</file>
+        <file>apps/google-maps.png</file>
+        <file>apps/google-play.png</file>
+        <file>apps/instagram.png</file>
+        <file>apps/youtube.png</file>
     </qresource>
 </RCC>
