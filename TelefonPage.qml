@@ -52,7 +52,6 @@ Item {
                 TextArea {
                     id: nameId
                     placeholderText: "Type name"
-
                 }
             }
 
@@ -73,10 +72,12 @@ Item {
             }
         }
         onAccepted: {
-            converterId.pushData(nameId.text, "0", phoneId.text)
-            nameId.text = ""
-            phoneId.text = ""
-            updateData()
+            if(nameId.text != "" && phoneId.text != "") {
+                converterId.pushData(nameId.text, "0", phoneId.text)
+                nameId.text = ""
+                phoneId.text = ""
+                updateData()
+            }
         }
     }
 
