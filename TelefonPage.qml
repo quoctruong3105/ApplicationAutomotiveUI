@@ -20,7 +20,6 @@ Item {
         id: converterId
     }
 
-
     Label {
         id: dictionaryLabelId
         y: 5

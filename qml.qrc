@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>MyButton.qml</file>
         <file>NavigationPage.qml</file>
         <file>KlimaPage.qml</file>
         <file>MultimediaPage.qml</file>
@@ -11,5 +10,6 @@
         <file>ErrorPage.qml</file>
         <file>CameraPage.qml</file>
         <file>AppPage.qml</file>
+        <file>GroupButton.qml</file>
     </qresource>
 </RCC>

@@ -344,13 +344,15 @@ Window {
                     height: parent.height - 10
                     width: parent.width
                     anchors.horizontalCenter: parent.horizontalCenter
-                    color: "lightslategray"
+                    color: "black"
                     Rectangle {
                         id: backgroundId
                         z: 5
                         anchors.centerIn: parent
                         width: speedOdoId.width + gearOdoId.width * 2 - speedOdoId.width/3
                         height: speedOdoId.height * 1.5
+                        border.color: "yellow"
+                        border.width: 4
                         color: "black"
                         radius: width
                         antialiasing: true
