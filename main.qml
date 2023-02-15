@@ -283,6 +283,7 @@ Window {
                 height: col1.height - groupButtonId.height
                 anchors.top: separateId.bottom
                 anchors.bottom: rootId.bottom
+                clip: true
                 SwipeView {
                     id: swipeViewId
                     anchors.fill: parent
