@@ -6,18 +6,18 @@ import QtQuick 2.9
 Item {
     id: navigationPage
     anchors.fill: infomationAreaId
-//    Rectangle {
-//        anchors.fill: infomationAreaId
-//        visible: true
-//        Plugin {
-//            id: mapPlugin
-//            name: "osm"
-//        }
-//        Map {
-//            anchors.fill: parent
-//            plugin: mapPlugin
-//            center: QtPositioning.coordinate(10.80, 106.64)
-//            zoomLevel: 15
-//        }
-//    }
+    Rectangle {
+        anchors.fill: infomationAreaId
+        visible: true
+        Plugin {
+            id: mapPlugin
+            name: "osm"
+        }
+        Map {
+            anchors.fill: parent
+            plugin: mapPlugin
+            center: QtPositioning.coordinate(10.80, 106.64)
+            zoomLevel: 15
+        }
+    }
 }

@@ -20,6 +20,8 @@ Window {
     property bool airbagOn: fasle
     property bool oilpressureWarning: fasle
     property bool batteryWarning: fasle
+    property bool onTurnLeft: false
+    property bool onTurnRight: false
 
     Component.onDestruction:  {
         allSettingsId.fuelNeedleRotationId = fuelLevel
@@ -84,11 +86,29 @@ Window {
     }
 
     Timer {
-        interval: 1000
+        id: timer
+        interval: 500
         running: true
         repeat: true
         onTriggered: {
-
+            if(onTurnLeft) {
+                if(turnLeftOff.opacity === 1) {
+                    turnLeftOff.opacity = 0
+                    turnLeftOn.opacity = 1
+                } else {
+                    turnLeftOff.opacity = 1
+                    turnLeftOn.opacity = 0
+                }
+            }
+            if(onTurnRight) {
+                if(turnRightOff.opacity === 1) {
+                    turnRightOff.opacity = 0
+                    turnRightOn.opacity = 1
+                } else {
+                    turnRightOff.opacity = 1
+                    turnRightOn.opacity = 0
+                }
+            }
         }
     }
 
@@ -358,14 +378,45 @@ Window {
                         radius: width
                         antialiasing: true
                         Rectangle {
-                            width: 10
+                            id: turnLeftId
+                            width: 70
                             height: width
-                            color: "white"
-                            x: 200
-                            y: 50
-                            z: 3
+                            color: "black"
+                            anchors.bottom: gearOdoId.top
+                            anchors.right: gearOdoId.right
+                            Image {
+                                id: turnLeftOff
+                                anchors.fill: parent
+                                source: "images/turnOff.png"
+                            }
+                            Image {
+                                id: turnLeftOn
+                                anchors.fill: parent
+                                source: "images/turnOn.png"
+                                opacity: 0
+                            }
                         }
-
+                        Rectangle {
+                            id: turnRightId
+                            width: 70
+                            height: width
+                            color: "black"
+                            anchors.bottom: fuelOdoContainerId.top
+                            anchors.left: fuelOdoContainerId.left
+                            Image {
+                                id: turnRightOff
+                                anchors.fill: parent
+                                source: "images/turnOff.png"
+                                rotation: 180
+                            }
+                            Image {
+                                id: turnRightOn
+                                anchors.fill: parent
+                                source: "images/turnOn.png"
+                                rotation: 180
+                                opacity: 0
+                            }
+                        }
                         Rectangle {
                             id: minorBackground
                             width: speedOdoId.width + gearOdoId.width*2/3
@@ -785,6 +836,34 @@ Window {
                             }
                             if(event.key === Qt.Key_2 && engineOn === true) {
                                 washIcon.opacity = 1
+                            }
+                            if(event.key === Qt.Key_Left) {
+                                if(onTurnRight) {
+                                    onTurnRight = false
+                                    turnRightOn.opacity = 0
+                                    turnRightOff.opacity = 1
+                                }
+                                onTurnLeft = !onTurnLeft
+                                if(onTurnLeft) {
+                                    timer.start()
+                                } else {
+                                    turnLeftOn.opacity = 0
+                                    turnLeftOff.opacity = 1
+                                }
+                            }
+                            if(event.key === Qt.Key_Right) {
+                                if(onTurnLeft) {
+                                    onTurnLeft = false
+                                    turnLeftOn.opacity = 0
+                                    turnLeftOff.opacity = 1
+                                }
+                                onTurnRight = !onTurnRight
+                                if(onTurnRight) {
+                                    timer.start()
+                                } else {
+                                    turnRightOn.opacity = 0
+                                    turnRightOff.opacity = 1
+                                }
                             }
                         }
                         Keys.onReleased: {

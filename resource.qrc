@@ -44,5 +44,7 @@
         <file>apps/google-play.png</file>
         <file>apps/instagram.png</file>
         <file>apps/youtube.png</file>
+        <file>images/turnOff.png</file>
+        <file>images/turnOn.png</file>
     </qresource>
 </RCC>
